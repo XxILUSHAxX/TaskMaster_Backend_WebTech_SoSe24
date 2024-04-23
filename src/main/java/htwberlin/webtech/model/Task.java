@@ -1,7 +1,8 @@
-/*package htwberlin.webtech.model;
+package htwberlin.webtech.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,4 +71,4 @@ public class Task {
 
 
 }
- */
+

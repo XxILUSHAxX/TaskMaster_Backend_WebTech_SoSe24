@@ -1,6 +1,7 @@
 App-Name: TaskMaster
 
 Beschreibung:
+
 Es gibt ein Software Unternehmen, das die Produktivität ihrer Mitarbeiter steigern möchte.
 Das Unternehmen hat sich eine Web-Anwendung überlegt, wo die Mitarbeiter ihren Alltag besser strukturieren können und zwar mit einer To-Do Liste. 
 Man bekommt pro erledigte Aufgabe 5 Punkte und bei 100 Punkten, bekommt man einen extra Urlaubstag.

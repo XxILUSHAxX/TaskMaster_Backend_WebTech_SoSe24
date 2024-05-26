@@ -5,7 +5,7 @@
 FROM gradle:jdk21-jammy AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
-RUN --network="host" gradle build --no-daemon --warning-mode all
+RUN gradle build --no-daemon --warning-mode all
 
 LABEL org.name="ProfWider"
 

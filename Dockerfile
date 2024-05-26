@@ -6,7 +6,7 @@ COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build --no-daemon
 
-LABEl org.name="ProfWider"
+LABEL org.name="ProfWider"
 #Package Stage
 #
 FROM eclipse-temurin:21-jdk-jammy

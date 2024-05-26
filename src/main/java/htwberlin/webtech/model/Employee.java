@@ -15,7 +15,7 @@ public class Employee implements Serializable {
     @Column(nullable = false)
     private String email;
     private String adress;
-    private int phoneNumber;
+    private String phoneNumber;
     private int pointCount;
 
 
@@ -23,7 +23,7 @@ public class Employee implements Serializable {
     public Employee(){
 
     }
-    public Employee(String name, String email, String adress, int phoneNumber, int pointCount) {
+    public Employee(String name, String email, String adress, String phoneNumber, int pointCount) {
         this.name = name;
         this.email = email;
         this.adress = adress;
@@ -55,11 +55,11 @@ public class Employee implements Serializable {
         this.adress = adress;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

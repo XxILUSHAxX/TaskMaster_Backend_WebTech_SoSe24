@@ -19,8 +19,9 @@ public class Task {
     @Column(nullable = false)
     private String priority; // "Low", "Medium", "High"
 
-    @Column(nullable = false)
-    private String status; // "To-Do", "Doing", "Done"
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false,columnDefinition = "ENUM('TODO','DOING','DONE')")
+    private TaskStatus status; // "To-Do", "Doing", "Done"
 
 
     //Default Constructor
@@ -28,7 +29,7 @@ public class Task {
 
     }
 
-    public Task(Employee employee,String description, String priority, String status) {
+    public Task(Employee employee,String description, String priority, TaskStatus status) {
         this.employee = employee;
         this.description = description;
         this.priority = priority;
@@ -40,15 +41,23 @@ public class Task {
         return employee;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
-    public String getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 

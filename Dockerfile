@@ -1,7 +1,7 @@
 FROM gradle:8-jdk21 as builder
 WORKDIR /
 COPY . ./
-RUN gradle build
+RUN ./gradlew build
 
 FROM openjdk:21-slim
 LABEL authors="Ilie.Chicioroaga"

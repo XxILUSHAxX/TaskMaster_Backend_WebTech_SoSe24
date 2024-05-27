@@ -1,17 +1,9 @@
-#
-#Build stage
-#
+FROM gradle:8-jdk21 as builder
+WORKDIR /
+COPY . ./
+RUN gradle build
 
-FROM gradle:jdk17-jammy AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle build --no-daemon
-
-LABEL org.name="ProfWider"
-
-#
-#Package stage
-#
-FROM eclipse-temurin:17-jdk-jammy
-COPY --from=build /home/gradle/src/build/libs/TaskMaster_Backend_WebTech_SoSe24-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:21-slim
+LABEL authors="Ilie.Chicioroaga"
+COPY --from=builder build/libs .
+ENTRYPOINT ["java","-jar","/webtech-0.0.1-SNAPSHOT.jar"]

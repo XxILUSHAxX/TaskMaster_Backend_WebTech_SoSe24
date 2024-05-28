@@ -19,7 +19,7 @@ public class WebtechApplication {
 
 	@RestController
 	class HelloController {
-		@GetMapping("/api/hello")
+		@GetMapping("/hello")
 		public String hello() {
 			return "{\"message\": \"Hello, world!\"}";
 		}

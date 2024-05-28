@@ -1,4 +1,4 @@
-/*package htwberlin.webtech.controller;
+package htwberlin.webtech.controller;
 
 import htwberlin.webtech.model.Task;
 import htwberlin.webtech.service.TaskService;
@@ -20,7 +20,7 @@ public class TaskController {
     public List<Task> getAllTasks() {
         return taskService.getAllTasks();
     }
-
+/*
     @PostMapping
     public ResponseEntity<Task> addTask(@RequestBody Task task) {
         Task newTask = taskService.addTask(task);
@@ -45,6 +45,8 @@ public class TaskController {
         Task task = taskService.getTaskById(id);
         return task != null ? new ResponseEntity<>(task, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-}
 
  */
+}
+
+

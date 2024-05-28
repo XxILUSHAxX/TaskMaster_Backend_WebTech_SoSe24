@@ -1,4 +1,4 @@
-/*package htwberlin.webtech.model;
+package htwberlin.webtech.model;
 
 public enum TaskStatus {
     TODO,
@@ -7,4 +7,3 @@ public enum TaskStatus {
 }
 
 
- */

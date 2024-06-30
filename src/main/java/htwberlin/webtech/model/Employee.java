@@ -80,6 +80,13 @@ public class Employee implements Serializable {
         this.pointCount = pointCount;
     }
 
+    public void awardVacationDay() {
+        if (this.pointCount >= 100) {
+            // Award extra vacation day
+            this.pointCount -= 100; // Deduct points
+            // Logic to award vacation day here, e.g., increment a vacation days field
+        }
+    }
 
 }
 
